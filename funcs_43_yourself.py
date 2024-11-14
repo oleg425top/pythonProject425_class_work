@@ -28,7 +28,11 @@
 # draw(20,'up','@')
 # draw(10,'front','@')
 
-def max_num(a,b,c,d):
-    print(f'{max(a, b, c, d)} максимальное число')
+# def max_num(a,b,c,d):
+#     print(f'{max(a, b, c, d)} максимальное число')
+#
+# max_num(5,65,8,9)
 
-max_num(5,65,8,9)
+
+a, d, *c = 4, 7, 8, 9
+print(a, d, c)
