@@ -9,7 +9,8 @@ def number_of_str():
     return f"количество элементов в строке {str_counter}"
 
 print(number_of_str())
-print(f'счетчик {str_counter}')
+# print(f'счетчик {str_counter}')
 print(number_of_str())
-print(f'счетчик {str_counter}')
+# print(f'счетчик {str_counter}')
 
+print(number_of_str())
