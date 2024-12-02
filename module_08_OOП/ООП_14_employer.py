@@ -34,7 +34,7 @@ class Manager(Employer):
 class Worker(Employer):
     def __str__(self):
         worker_str = super().__str__()
-        return f'{worker_str} должность President'
+        return f'{worker_str} должность Worker'
     def print_data(self):
         return f'{super().print_data()}\nis Worker'
     def int(self):
