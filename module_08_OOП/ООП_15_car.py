@@ -1,6 +1,3 @@
-from select import select
-
-
 class Wheels:
     def __init__(self, brand_w, diameter):
         self.__brand_w = brand_w
@@ -58,7 +55,11 @@ class Car(Wheels, Engine, Doors):
     def __str__(self):
         return (f'это машина марки {self.get_brand_car()} c диаметром колес {self.get_count()}\n'
                 f'марки {self.get_brand_w()} c двигателем марки {self.get_brand_e()}\n'
-                f'объемом {self.get_capacity()}, c {self.get_count()} дверьми\n'
+                f'объемом {self.get_capacity()} литра, c {self.get_count()} дверьми\n'
                 f'материал обивки дверей {self.get_door_trim()}')
+
+car = Car('Yokohama', '17 дюймов', 'Toyota', 3, 4, 'кожа', "Nissan-GTR")
+
+print(car)
 
 
