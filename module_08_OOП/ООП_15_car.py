@@ -42,4 +42,11 @@ class Doors:
     def get_count(self):
         return self.__count
 
+class Car(Wheels, Engine, Doors):
+    def __init__(self, brand_w, diameter, brand_e, capacity, count: int, door_trim, brand_car):
+        super().__init__(brand_w, diameter)
+        Engine.__init__(self, brand_e, capacity)
+        Doors.__init__(self, count, door_trim)
+        self.__brand_car = brand_car
+
 
