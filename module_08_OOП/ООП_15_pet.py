@@ -70,17 +70,17 @@ class Parrot(Pet):
 
 
 # class Hamster(Pet):
-# pet = Pet('Бублик')
-# print(pet)
-# dog = Dog('Шарик','лай','волк')
-# print(dog)
-# print(dog.get_sound())
-# print(dog.get_type())
-# print(dog.get_name())
-#
+pet = Pet('Бублик')
+print(pet)
+print()
+dog = Dog('Шарик','лай','волк')
+print(dog.get_name())
+print(dog.get_sound())
+print(dog.get_type())
+print()
+
 cat = Cat('Васька', 'мурр', 'дикая кошка')
-print(cat)
-#
-# print(cat.get_sound())
-# print(cat.get_type())
-# print(cat.get_name())
+print(cat.get_name())
+print(cat.get_sound())
+print(cat.get_type())
+
