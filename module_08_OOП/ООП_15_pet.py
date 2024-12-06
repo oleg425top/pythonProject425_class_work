@@ -51,7 +51,7 @@ class Cat(Pet):
     def get_type(self):
         return f'{self.get_name()} принадлежит подклассу: {self.__type} '
 
-    class Parrot(Pet):
+class Parrot(Pet):
         def __init__(self, name, sound, type_parrot):
             super().__init__(name)
             self.__sound = sound
@@ -67,7 +67,7 @@ class Cat(Pet):
         def get_type(self):
             return f'{self.get_name()} принадлежит подклассу: {self.__type} '
 
-    class Hamster(Pet):
+class Hamster(Pet):
         def __init__(self, name, sound, type_hamster):
             super().__init__(name)
             self.__sound = sound
@@ -78,39 +78,40 @@ class Cat(Pet):
             return f'Хомяк {name}'
 
         def get_sound(self):
-            return f'{self.get_name()} он с*** {self.__sound} и воняет!'
+            return f'{self.get_name()} он {self.__sound} и воняет!'
 
         def get_type(self):
             return f'{self.get_name()} принадлежит подклассу: {self.__type} '
 
-    pet = Pet('Бублик')
-    print(pet)
-    print()
 
-    dog = Dog('Шарик', 'лай', 'волк')
-    print(dog)
-    print(dog.get_name())
-    print(dog.get_sound())
-    print(dog.get_type())
-    print()
+pet = Pet('Бублик')
+print(pet)
+print()
 
-    cat = Cat('Васька', 'мурр', 'дикая кошка')
-    print(cat)
-    print(cat.get_name())
-    print(cat.get_sound())
-    print(cat.get_type())
-    print()
+dog = Dog('Шарик', 'лай', 'волк')
+print(dog)
+print(dog.get_name())
+print(dog.get_sound())
+print(dog.get_type())
+print()
 
-    parrot = Parrot('Яша', 'Разговаривает на Русском', 'дикие попугаи', )
-    print(parrot)
-    print(parrot.get_name())
-    print(parrot.get_sound())
-    print(parrot.get_type())
-    print()
+cat = Cat('Васька', 'мурр', 'дикая кошка')
+print(cat)
+print(cat.get_name())
+print(cat.get_sound())
+print(cat.get_type())
+print()
 
-    hamster = Hamster('Жирный', 'Пищит', 'грызун', )
-    print(hamster)
-    print(hamster.get_name())
-    print(hamster.get_sound())
-    print(hamster.get_type())
-    print()
+parrot = Parrot('Яша', 'Разговаривает на Русском', 'дикие попугаи', )
+print(parrot)
+print(parrot.get_name())
+print(parrot.get_sound())
+print(parrot.get_type())
+print()
+
+hamster = Hamster('Жирный', 'Пищит', 'грызун', )
+print(hamster)
+print(hamster.get_name())
+print(hamster.get_sound())
+print(hamster.get_type())
+print()
