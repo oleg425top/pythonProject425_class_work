@@ -6,31 +6,46 @@ class Circle:
 
 
     def length_of_circle(self):
-        length = round(2 * pi * self.radius, 3)
+        length = int(2 * pi * self.radius)
         return f'длина окружности равна: {length} см'
 
     def square_of_circle(self):
-        square_cir = round(pi * self.radius ** 2, 3)
-        return f'площадь круга равна: {square_cir} см'
+        square_cir = int(pi * self.radius ** 2)
+        return square_cir
 
 class Square:
     def __init__(self, side):
         self.side = side
 
     def perimeter(self):
-        perimeter = round(self.side * 4, 3)
+        perimeter = int(self.side * 4)
         return f'периметр квадрата равен: {perimeter}'
 
     def square_of_square(self):
         square_sq = self.side ** 2
-        return f'площадь квадрата равна: {square_sq}'
+        return square_sq
+
+class CircleInSquare(Circle, Square):
+    def __init__(self, square_of_circle, square_of_square):
+        super().__init__(square_of_circle)
+        Square.__init__(self, square_of_square)
+
+
+    def checked(self):
+        if self.square_of_circle() / self.square_of_square() == 4 / pi:
+            return f' окружность можно считать вписанной в квадрат'
+        else:
+            return f'окружность не вписана в квадрат'
 
 
 
-circle = Circle(15)
+circle = Circle(10)
 print(circle.length_of_circle())
 print(circle.square_of_circle())
 print()
 square = Square(10)
 print(square.square_of_square())
 print(square.perimeter())
+
+check_1 = CircleInSquare(circle.square_of_circle(), square.square_of_square())
+print(check_1.checked())
