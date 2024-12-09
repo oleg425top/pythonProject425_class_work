@@ -1,5 +1,7 @@
 from math import pi
 
+
+
 class Circle:
     def __init__(self, radius):
         self.radius = radius
@@ -10,7 +12,7 @@ class Circle:
         return f'длина окружности равна: {length} см'
 
     def square_of_circle(self):
-        square_cir = int(pi * (self.radius ** 2))
+        square_cir = int(pi * self.radius ** 2)
         return square_cir
 
 class Square:
@@ -26,32 +28,27 @@ class Square:
         return square_sq
 
 class CircleInSquare(Circle, Square):
-    def __init__(self):
-        self.square_of_circle = square_of_circle
-        self.square_of_square = square_of_square
-        square_of_circle = super().square_of_circle()
-        square_of_square = super().square_of_square()
 
+    def square_of_circle(self):
+        return super().square_of_circle()
+    def square_of_square(self):
+        return super().square_of_square()
 
     def checked(self):
-        sq = self.square_square()
-        cir = self.square_circle()
-        print(sq)
-        print(cir)
-        if sq / cir  == 4 / pi:
+        if self.square_of_circle() / self.square_of_square() == 4 / pi:
             return f' окружность можно считать вписанной в квадрат'
         else:
             return f'окружность не вписана в квадрат'
 
-
+    def __str__(self):
+        return self.checked()
 
 circle = Circle(10)
-# print(circle.length_of_circle())
-# print(circle.square_of_circle())
+print(circle.length_of_circle())
+print(circle.square_of_circle())
 print()
-square = Square(20)
-# print(square.square_of_square())
-# print(square.perimeter())
-
-check_1 = CircleInSquare(circle.radius, square.side)
-print(check_1.checked())
+square = Square(10)
+print(square.square_of_square())
+print(square.perimeter())
+check_1 = CircleInSquare(circle.radius)
+print(check_1.checked)
