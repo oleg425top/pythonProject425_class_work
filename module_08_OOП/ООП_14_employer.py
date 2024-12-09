@@ -6,7 +6,7 @@ class Employer:
         self.age = age
 
     def __int__(self):
-        return f'возраст {self.name} {self.age}'
+        return self.age
 
     def __str__(self):
         return f'это {self.name} {self.surname} его возраст: {self.age}'
@@ -14,8 +14,8 @@ class Employer:
     def print_data(self):
         return f'{self.name} This is Employer class'
 
-    # def int(self):
-    #     return f'возраст служащего {self.age}'
+    def int(self):
+        return f'возраст служащего {self.age}'
 
 
 class President(Employer):
@@ -67,6 +67,6 @@ print(man_3.print_data())
 print(man_1)
 print(man_2)
 print(man_3)
-print(man_1.__int__())
-print(man_2.__int__())
-print(man_3.__int__())
+print(int(man_1))
+print(int(man_2))
+print(int(man_3))
