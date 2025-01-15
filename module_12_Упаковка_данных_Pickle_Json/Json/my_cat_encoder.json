@@ -1,0 +1,13 @@
+{
+  "Name": "Vaska",
+  "Age": 3,
+  "Gender": "men",
+  "Methods": {
+    "get_data": [
+      "Vaska",
+      3,
+      "men"
+    ]
+  },
+  "ClassName": "MyCat"
+}
